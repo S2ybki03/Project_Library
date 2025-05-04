@@ -1,16 +1,17 @@
 package test;
 
+import service.LibService;
 import model.Book;
-import org.junit.jupiter.api.*;
-
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class LibServiceTest {
-    LibraryService lib;
+    LibService lib;
 
     @BeforeEach
     void setUp() {
-        lib = new LibraryService();
+        lib = new LibService();
         lib.addBook(new Book("1", "Pan Tadeusz", "Adam Mickiewicz", 2));
         lib.registerUser("u1", "Jan", "jan@example.com", "1234");
     }
